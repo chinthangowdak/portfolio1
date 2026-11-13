@@ -1,0 +1,59 @@
+:root{--ink:#f2f6ff;--mut:#b4c3e6;--card:rgba(10,18,50,.55);--line:rgba(160,190,255,.28);--acc:#6fa0ff;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;color:var(--ink);font-family:"Segoe UI",system-ui,Helvetica,Arial,sans-serif;background:#dcecff url(../images/background.jpg) center/cover fixed}
+body::after{content:"";position:fixed;inset:0;background:rgba(3,6,20,.35);z-index:-1}
+header{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;padding:18px 6vw;border-bottom:1px solid var(--line);backdrop-filter:blur(10px);position:sticky;top:0;z-index:5;background:rgba(5,10,31,.5)}
+.logo{font-weight:700;letter-spacing:.04em;font-size:1.15rem}
+nav a{color:var(--mut);text-decoration:none;margin-left:20px;padding:6px 2px;border-bottom:2px solid transparent;font-size:.95rem}
+nav a.on,nav a:hover{color:#fff;border-color:var(--acc)}
+main{max-width:980px;margin:0 auto;padding:48px 6vw 60px}
+.view{display:none}.view.on{display:block}
+.tag{color:var(--acc);letter-spacing:.3em;font-size:.8rem}
+h1{font-size:clamp(2.2rem,6vw,3.6rem);margin:.2em 0 .1em}
+h2.sub{font-weight:400;color:var(--mut);margin:0 0 1em;font-size:1.25rem}
+p{line-height:1.7;color:#dfe8ff}
+.btn{display:inline-block;margin:8px 10px 8px 0;padding:11px 22px;border-radius:999px;border:1px solid var(--acc);color:#fff;text-decoration:none;background:transparent;cursor:pointer;font-size:.95rem}
+.btn.fill{background:var(--acc);color:#04102e;font-weight:600}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px 26px;margin-top:22px;backdrop-filter:blur(12px)}
+.card h3{margin:0 0 12px;color:var(--acc);font-size:1.05rem;letter-spacing:.06em;text-transform:uppercase}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:0 22px}
+table{width:100%;border-collapse:collapse}
+td{padding:10px 4px;border-bottom:1px solid var(--line);vertical-align:top}
+td:first-child{color:var(--mut);width:42%}
+tr:last-child td{border-bottom:0}
+.chips span{display:inline-block;margin:4px 8px 4px 0;padding:6px 14px;border-radius:999px;background:rgba(111,160,255,.18);border:1px solid var(--line)}
+a{color:#9fc0ff}
+footer{text-align:center;color:var(--mut);padding:24px;font-size:.85rem;border-top:1px solid var(--line)}
+@media print{header,footer,.btn{display:none}body{background:#fff}.card{background:#fff;border-color:#999}*{color:#000!important}}
+.hero{display:flex;flex-wrap:wrap-reverse;align-items:center;justify-content:space-between;gap:32px 48px;margin-bottom:8px}
+.hero-text{flex:1 1 340px}
+.photo{flex:0 0 auto;margin:0 auto;position:relative;padding:8px;border-radius:28px;background:linear-gradient(145deg,var(--acc),rgba(160,190,255,.15));box-shadow:0 18px 50px rgba(0,0,0,.45)}
+.photo img{display:block;width:230px;height:300px;object-fit:cover;object-position:top;border-radius:21px}
+.proj h4{margin:0 0 4px;font-size:1.1rem}.proj .meta{color:var(--mut);font-size:.9rem;margin-bottom:8px}
+.proj ul{margin:8px 0 0;padding-left:20px;line-height:1.7;color:#1c2b52}
+@media print{.photo{box-shadow:none;background:none}}
+@media (min-width:1024px){
+body{font-size:18px}
+header{padding:22px 8vw}.logo{font-size:1.4rem}nav a{font-size:1.05rem;margin-left:32px}
+main{max-width:1280px;padding:72px 6vw 90px}
+h1{font-size:4.2rem}h2.sub{font-size:1.5rem}p{font-size:1.08rem}
+.hero{flex-wrap:nowrap;flex-direction:row;gap:72px;min-height:420px}
+.photo{padding:10px;border-radius:36px;order:2}.photo img{width:340px;height:440px;border-radius:27px}
+.btn{padding:13px 28px;font-size:1.05rem}
+.card{padding:30px 34px}.card h3{font-size:1.1rem}
+#home.on{display:grid;grid-template-columns:1fr 1fr;gap:0 28px}
+#home .hero,#home .card.full{grid-column:1/-1}
+#resume.on,#biodata.on{display:grid;grid-template-columns:1fr 1fr;gap:0 28px;align-items:start}
+#resume>.tag,#resume>h1,#resume>div:last-child,#biodata>.tag,#biodata>h1,#resume>.grid,#resume>.card.wide{grid-column:1/-1}
+#resume>.grid{display:grid;grid-template-columns:1fr 1fr;gap:0 28px}
+footer{font-size:.95rem}}
+body::after{background:rgba(255,255,255,.1)}
+:root{--ink:#0e1b3d;--mut:#44547c;--card:rgba(255,255,255,.66);--line:rgba(40,80,170,.25);--acc:#2a5bd7}
+header{background:rgba(255,255,255,.6)}
+nav a.on,nav a:hover{color:#0e1b3d}
+p{color:#1c2b52}
+a{color:#1f4fc4}
+.btn{color:#0e1b3d}.btn.fill{background:var(--acc);color:#fff}
+.chips span{background:rgba(42,91,215,.12)}
+.card{box-shadow:0 8px 30px rgba(40,80,170,.12)}
